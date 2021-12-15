@@ -50,7 +50,7 @@
 
      <!-- procedimento -->
      <div class="col-sm-2 col-md-4 mb-4">
-        <a style="text-decoration:none" href="?op=UtilizaProcedimento">
+        <a style="text-decoration:none" href="{{ route('admin.procedure-uses') }}">
             <div class="card text-white bg-dark mb-3 shadow h-200">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -131,7 +131,7 @@
 
     <!-- funcionario -->
     <div class="col-sm-2 col-md-4 mb-4">
-        <a style="text-decoration:none" href="?op=MainCode">
+        <a style="text-decoration:none" href="{{ route('admin.qrcodes') }}">
             <div class="card text-white bg-dark mb-3 shadow h-200">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">

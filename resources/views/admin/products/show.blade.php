@@ -34,7 +34,7 @@
                                     <td> @php echo $value->descricaoProduto @endphp</td>
                                     <td>R$: @php echo $value->valorCompra @endphp</td>
                                     <td>
-                                        <a class="btn btn-primary btn-sm" href="?op=EditarProduto&id=">
+                                        <a class="btn btn-primary btn-sm" href="{{ route('admin.update.product', $value->idProduto) }}">
                                         <i class="bx bx-edit "></i> Editar
                                         </a>
                                         <!-- <a class="btn btn-danger btn-sm" href="?op=ExcluirProduto&id=">

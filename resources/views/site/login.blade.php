@@ -30,20 +30,18 @@
                                         <h1 class="h4 text-gray-900 mb-4">Bem Vindo !</h1>
                                     </div>
                                     @if($errors->any())
-                                        <div class="alert alert-danger" role="alert">
+                                        {{-- <div class="alert alert-danger" role="alert"> --}}
                                                 @foreach ($errors->all() as $erro)
                                                     {{$erro}}
                                                     <br>
                                                 @endforeach
-                                        </div>
+                                        {{-- </div> --}}
                                     @endif
 
                                     @if(isset($erro))
-                                        <div class="alert alert-danger" role="alert">
-                                            
+                                        {{-- <div class="alert alert-danger" role="alert">  --}}
                                                {{$erro}}
-                                           
-                                        </div>
+                                        {{-- </div> --}}
                                     @endif
                                     
                                     <form method="POST" action="{{route('login-auth')}}">

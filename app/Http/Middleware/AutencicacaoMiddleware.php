@@ -23,6 +23,7 @@ class AutencicacaoMiddleware
         if(isset($_SESSION['user_key']) && $_SESSION['user_key'] !=  '')
         {
             return $next($request);
+            
         }else{
             return redirect()->route('login-page', ['error' => 2]);
         }

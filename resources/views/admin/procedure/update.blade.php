@@ -11,7 +11,7 @@
 
         <div class="p-5">
             <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Cadastrar Procedimento</h1>
+                <h1 class="h4 text-gray-900 mb-4">Atualizar Procedimento</h1>
             </div>
             
             @if($errors->any())
@@ -27,7 +27,7 @@
             
             <form class="user" method="POST" action=" {{ route('admin.create-procedure') }} ">
                 @csrf
-                <input type="text" name="id" value="{{ $procedure->idProcedimento}}">
+                <input type="text" name="id" value="{{ $procedure->idProcedimento }}">
                 <label for="">Dados Procedimento</label>
                 <div class="form-group row">
                     <div class="col-sm-4 mb-3 mb-sm-0">

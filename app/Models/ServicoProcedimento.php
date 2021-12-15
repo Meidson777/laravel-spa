@@ -13,12 +13,12 @@ class ServicoProcedimento extends Model
         
         'idServico',
         'statusServico',	
-        'checkIn',	
-        'chekout',	
         'Cliente_idCliente',	
         'Procedimento_idProcedimento',	
         'funcionario_idFuncionarioAuxiliar',	
         'Funcionario_idFuncionario',
     ];   
+
+    protected $table = 'servicoprocedimentos';
 
 }

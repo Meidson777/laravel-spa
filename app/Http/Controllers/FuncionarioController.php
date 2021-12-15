@@ -76,8 +76,30 @@ class FuncionarioController extends Controller
         return redirect()->route('admin.employees');
     }
 
-    public function billing()
+    public function billing($id)
     {
-        echo 'billing';
+        $erro = 1;
+    
+        if($_SESSION['user_type'] != 0)
+        {
+            $revenue_employee = DB::table('pagamentoprocedimentos')
+                    ->join('servicoprocedimentos', 'pagamentoprocedimentos.Servico_idServico', '=', 'servicoprocedimentos.idServico' )
+                    ->join('procedimentos', 'pagamentoprocedimentos.Servico_IdProcedimento', '=', 'procedimentos.idProcedimento')
+                    ->join('clientes', 'pagamentoprocedimentos.Servico_IdCliente', '=', 'clientes.idCliente')->where('Funcionario_idFuncionario', $id)
+                    ->paginate(10);
+        }else{
+            
+            if($id != $_SESSION['user_id']){
+                return redirect()->route('admin.home', ['erro' => $erro]);
+            }else{
+                $revenue_employee = DB::table('pagamentoprocedimentos')
+                    ->join('servicoprocedimentos', 'pagamentoprocedimentos.Servico_idServico', '=', 'servicoprocedimentos.idServico' )
+                    ->join('procedimentos', 'pagamentoprocedimentos.Servico_IdProcedimento', '=', 'procedimentos.idProcedimento')
+                    ->join('clientes', 'pagamentoprocedimentos.Servico_IdCliente', '=', 'clientes.idCliente')
+                    ->where('servicoprocedimentos.Funcionario_idFuncionario', $id)
+                    ->paginate(10);
+            }
+        }
+        return view('admin.employee.revenues', compact('revenue_employee'));
     }
 }

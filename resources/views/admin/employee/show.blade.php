@@ -31,7 +31,7 @@
                                 <td>@php echo $value->telefoneFuncionario @endphp</td>
                                 <td>@php echo $value->emailFuncionario @endphp</td>
                                 <td>
-                                    <a class="btn btn-success btn-sm m-1" href="{{ route('employee-billing') }}">
+                                    <a class="btn btn-success btn-sm m-1" href="{{ route('employee-billing', $value->idFuncionario) }}">
                                         <i class="bx bx-dollar "></i> Faturamento
                                     </a>
                                     <a class="btn btn-primary btn-sm m-1" href="">

@@ -14,7 +14,6 @@ class PagamentoProcedimento extends Model
     'idPagamentoProcedimento',	
     'valorPagamento',	
     'valorProcedimento',	
-    'dataPagamento',	
     'tipoPagamento',	
     'troco',	
     'Servico_idServico',	
@@ -22,4 +21,6 @@ class PagamentoProcedimento extends Model
     'Servico_IdProcedimento',
 	
     ]; 
+
+    protected $table = 'pagamentoprocedimentos';
 }

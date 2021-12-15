@@ -42,7 +42,7 @@
                     </tbody>
                 </table>
             </div>
-            <a href="?op=AdicionarEstoque" class="btn btn-sm btn-success">Adicionar ao estoque</a>
+            <a href="{{ route('admin.create.inventory') }}" class="btn btn-sm btn-success">Adicionar ao estoque</a>
         </div>
     </div>
 

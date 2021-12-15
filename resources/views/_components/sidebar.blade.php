@@ -18,8 +18,9 @@
                     <i class='bx bx-desktop nav__icon'></i>
                     <span class="nav__name">Área de Trabalho</span>
                 </a>
-
-                <a href="?op=MainAgendamento" class="nav__link">
+                
+                @if ($user_type != 0)
+                <a href="{{ route('admin.scheduling') }}" class="nav__link">
                     <i class='bx bxs-calendar nav__icon'></i>
                     <span class="nav__name">Agenda</span>
                 </a>
@@ -28,16 +29,17 @@
                     <i class='bx bx-user nav__icon'></i>
                     <span class="nav__name">Clientes</span>
                 </a>
+                @endif
 
                 @if ($user_type != 1)
-                <a href="?op=FaturamentoFuncionario" class="nav__link">
+                <a href="{{ route('employee-billing', $_SESSION['user_id']) }}" class="nav__link">
                     <!-- <i class='bx bx-wrench'></i> -->
                     <i class='bx bx-dollar nav__icon'></i>
                     <span class="nav__name">Faturamento</span>
                 </a>
                 @endif
                
-                <a href="index.php?op=MainQr" class="nav__link">
+                <a href="{{ route('admin.scann') }}" class="nav__link">
                     <i class='bx bx-barcode-reader nav__icon'></i>
                     <span class="nav__name">QrScanner</span>
                 </a>

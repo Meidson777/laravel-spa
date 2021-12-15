@@ -36,7 +36,7 @@
                                 <td>@php echo $item->nomeCliente @endphp</td>
                                 <td id="valor" class="text-center">R$: @php echo $item->valorProcedimento @endphp</td>
                                 <td class="text-center text-italic"> @php echo $item->statusServico @endphp</td>
-                                <td class="text-center">@php echo $item->dataPagamento @endphp</td>
+                                <td class="text-center">@php echo $item->created_at @endphp</td>
                                 <td class="text-center">
                                     <a class="btn btn-primary btn-sm" href="?op=DetailsFinalizaProcedimento&id=">
                                         <i class='bx bx-chevron-right'></i> Detalhes
